@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhaskara</title>
+    <h1>Programa de calcular Bhaskara</h1>
+</head>
+<body>
+<label for="inputA">Digite A</label>
+<input type="number" name="inputA" id="inputA">
+<br>
+<label for="inputB">Digite B</label>
+<input type="number" name="inputB" id="inputB">
+<br>
+<label for="inputC">Digite C</label>
+<input type="number" name="inputC" id="inputC">
+<br>
+<input type="button" name="Calcular" id="calcular" value="calcular" onclick="funcaocalcular()">
+<br>
+<span id="resposta1">x1</span>
+<br>
+<span id="resposta2">x2</span>
+<script>
+    function funcaocalcular(){
+    let valorA = parseFloat(document.getElementById("inputA").value);
+    let valorB = parseFloat(document.getElementById("inputB").value);
+    let valorC = parseFloat(document.getElementById("inputC").value);
+    let delta = Math.sqrt(valorB**2 -4* valorA * valorC );
+    let soma1 = (-valorB - delta)/ (2*valorA); document.getElementById("resposta1").innerHTML=soma1;
+    let soma2 = (-valorB + delta)/(2*valorA); document.getElementById("resposta2").innerHTML=soma2;
+    }
+</script>
+    
+</body>
+</html>
